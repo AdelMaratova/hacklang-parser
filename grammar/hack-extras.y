@@ -18,6 +18,8 @@ hack_optional_generics_placeholder_list:
 	| hack_non_optional_generics_placeholder_list { $$ = $1; }
 ;
 
+
+
 hack_type_list:
 	  type { $$ = init($1); }
 	| hack_type_list ',' type { $$ = push($1, $3); }
@@ -26,6 +28,7 @@ hack_type_list:
 hack_enum:
 	  T_STRING '=' scalar ';' { $$ = Node\Const_[$1, $3]; }
 ;
+
 
 hack_non_empty_enum_list:
 	  hack_enum { init($1); }
@@ -180,3 +183,14 @@ expr:
 	  hack_lambda { $$ = $1; }
 	| expr T_PIPE expr { $$ = PhackExpr\Pipe[$1, $3]; }
 ;
+
+hack_type:
+			T_TYPE T_STRING '=' type	 { echo('Test');}
+;
+
+non_empty_statement:
+			hack_type ';'		{ $$ = $1; echo('test');}
+;
+			
+			
+			

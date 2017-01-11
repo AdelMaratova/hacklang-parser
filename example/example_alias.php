@@ -1,0 +1,1 @@
+<?hh type myType = int;

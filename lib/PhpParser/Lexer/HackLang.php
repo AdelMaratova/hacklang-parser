@@ -11,6 +11,7 @@ class HackLang extends \PhpParser\Lexer\Emulative {
     const T_PIPE = 2004;
     const T_PIPE_VAR = 2005;
     const T_SUPER = 2006;
+    const T_TYPE = 2007;
 
     public function __construct(array $options = array()) {
         parent::__construct($options);
@@ -22,6 +23,7 @@ class HackLang extends \PhpParser\Lexer\Emulative {
         $this->tokenMap[self::T_PIPE]         = Tokens::T_PIPE;
         $this->tokenMap[self::T_PIPE_VAR]     = Tokens::T_PIPE_VAR;
         $this->tokenMap[self::T_SUPER]        = Tokens::T_SUPER;
+		$this->tokenMap[self::T_TYPE]	      = Tokens::T_TYPE;
     }
 
     /*
@@ -192,6 +194,13 @@ class HackLang extends \PhpParser\Lexer\Emulative {
             ) {
                 $this->tokens[$i][0] = self::T_ENUM;
 
+		// Replace `type` strings to T_TYPE
+		} elseif (is_array($this->tokens[$i])
+		&& T_STRING === $this->tokens[$i][0]
+		&& !strcasecmp('type', $this->tokens[$i][1])
+		) {
+			$this->tokens[$i][0] = self::T_TYPE;
+
             // Replace `super` strings to T_SUPER
             } elseif (is_array($this->tokens[$i])
                 && T_STRING === $this->tokens[$i][0]
@@ -256,6 +265,7 @@ class HackLang extends \PhpParser\Lexer\Emulative {
                     array(T_OPEN_TAG, '<?hh', $this->tokens[$i + 1][2]),
                 ));
                 --$c;
+	
             }
         }
         parent::postprocessTokens();

@@ -34,7 +34,7 @@ $SED -e 's/namespace PhpParser\\Parser;/namespace PhpLang\\Phack\\PhpParser\\Par
 	> tokens.template
 
 $SED -e '/REQUIRE_ONCE/a %right T_LAMBDA_ARROW' \
-     -e '/REQUIRE_ONCE/a %token T_LAMBDA_OP T_LAMBDA_CP T_PIPE_VAR' \
+     -e '/REQUIRE_ONCE/a %token T_LAMBDA_OP T_LAMBDA_CP T_PIPE_VAR T_TYPE T_NEWTYPE' \
      -e '/REQUIRE_ONCE/a %left T_ENUM T_PIPE' \
      -e 's/T_AS/T_AS T_SUPER/g' \
 	< ../vendor/nikic/php-parser/grammar/tokens.y \
@@ -44,4 +44,4 @@ $SED -e '/Php5/d' -e 's/php7/hacklang/g' -e 's/Php7/HackLang/g' \
 	< ../vendor/nikic/php-parser/grammar/rebuildParsers.php \
 	> rebuildParser.php
 
-$PHP rebuildParser.php
+$PHP rebuildParser.php --keep-tmp-grammar
