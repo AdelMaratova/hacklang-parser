@@ -4,20 +4,14 @@
 use PhpLang\Phack;
 
 $program = array_shift($_SERVER['argv']);
-$ast = false;
+
 $infile = array_shift($_SERVER['argv']);
-if ($infile === '--ast') {
-    $ast = true;
-    $infile = array_shift($_SERVER['argv']);
-}
-if ($infile === '-') {
-    $infile = 'php://stdin';
-}
+
 
 if ($infile === null) {
-    fwrite(STDERR, "Usage: [--ast] {$program} filename.php\n\n");
-    fwrite(STDERR, "Transpile filename.php from HackLang to PHP\n");
-    fwrite(STDERR, "or dump AST when --ast passed\n");
+    fwrite(STDERR, "Usage: {$program} filename.php\n\n");
+    fwrite(STDERR, "Create and dump AST for filename.php\n");
+
     exit;
 }
 
@@ -30,8 +24,5 @@ if (file_exists(__DIR__ . '/vendor/autoload.php')) {
 }
 
 $file = file_get_contents($infile);
-if ($ast) {
-    print_r(Phack\compileString($file));
-} else {
-    echo "<?php", PHP_EOL, Phack\transpileString($file),PHP_EOL;
-}
+
+print_r(Phack\compileString($file));
