@@ -243,14 +243,14 @@ class HackLang extends \PhpParser\ParserAbstract
     );
 
     protected $action = array(
-          676,  677,  678,  679,  680,   73, -521,   74,   75,   76,
-         1207,  583,   19,  681,  682,  683,  719,  720,-32767,-32767,
+          676,  677,  678,  679,  680,   73, -519,   74,   75,   76,
+         1205,  583,   19,  681,  682,  683,  719,  720,-32767,-32767,
         -32767,-32767,   92,   93,   94,   95,   96,   28,  504,   77,
            78,   79,   80,   81,   82,   83,   84,   85,   86,   87,
            88,   89,   90,   91,   92,   93,   94,   95,   96,   97,
            98,   99,-32766,  268,-32766,-32766,-32766,  230,-32766,  684,
         -32766,-32766,-32766,    0,  126,  100, 1101,   97,   98,   99,
-          233,  268, -498,  685,  686,  687,  688,  689,  690,  691,
+          233,  268, -496,  685,  686,  687,  688,  689,  690,  691,
         -32766,   30,  751,  100,  821,-32766, 1079,-32766,-32766,  692,
           693,  694,  695,  696,  697,  698,  699,  700,  701,  702,
          1114,  722,  723,  724,  725,  726,  714,  715,  716,  717,
@@ -258,9 +258,9 @@ class HackLang extends \PhpParser\ParserAbstract
           747,  748,  749,  750,  710,  711,  712,  713,  743,  734,
           732,  733,  729,  730, -449,  721,  727,  728,  735,  736,
           738,  737,  739,  740,  306,   40, -216, -415, 1140,  731,
-          742,  741,   43,   44,  438,   45,   46, -521,  241,-32766,
-         1208,-32766,-32766,-32766, 1143,  458, 1145, 1144,   47,   48,
-          121,   49, 1170,  123,-32766,  899,-32766,-32766,-32766,  419,
+          742,  741,   43,   44,  438,   45,   46, -519,  241,-32766,
+         1206,-32766,-32766,-32766, 1143,  458, 1145, 1144,   47,   48,
+          121,   49, 1168,  123,-32766,  899,-32766,-32766,-32766,  419,
         -32766,-32766,   13,-32766,-32766,-32766,-32766,-32766,-32766,-32767,
         -32767,-32767,-32767,-32767, 1066, 1067,-32766,   26,-32766,-32766,
         -32766,-32766,-32766,-32766,   50,   51,  626,  285,-32766, -415,
@@ -273,7 +273,7 @@ class HackLang extends \PhpParser\ParserAbstract
           469, -458, -160,-32766,  230,  283,  767,  768,  454,  455,
          -449,-32766,-32766,-32766,-32766,-32766,-32766,  458,  459,  295,
          1071, 1072, 1073, 1074, 1068, 1069,  271,   94,   95,   96,
-          420,  470, 1075, 1070,  397, 1189, 1188, 1187,  240,   64,
+          420,  470, 1075, 1070,  397, 1187, 1186, 1185,  240,   64,
           249,  280,  122,  283,  306,  441, -122, -122, -122,  306,
           378,  442, -417,  250,  916,  811,  308,  405,   35,   18,
           444, -122,  445, -122,  446, -122,  447, -122,  451,  452,
@@ -282,7 +282,7 @@ class HackLang extends \PhpParser\ParserAbstract
           597,  598,  439,  440,  453,  260,  261,  797,  840,  456,
           457,   29,  101,  102,  103,  104,  105,  106,  107,  108,
           109,  110,  111,  112, -417,-32766,  113,  121,  527,-32766,
-          287, -212, 1193,  824,  637, -122, -233,-32766, -417,-32766,
+          287, -212, 1191,  824,  637, -122, -233,-32766, -417,-32766,
         -32766,-32766,  409,  295,  115, -417,-32766, -420,-32766,-32766,
         -32766,  254,  970,  972, -459,   22, -459, -458, -160, -458,
           222,  295,  393, -415,  118,  416,  869,  410,-32766,  441,
@@ -304,10 +304,10 @@ class HackLang extends \PhpParser\ParserAbstract
           514,  445,  439,  446,  552,  447,-32766,  575,  576,  448,
           760,  640,-32766,   36,   37,  449,  824,  637,   38,  450,
           650,-32766,   63,  930,  658,  319,  320,  644,  471,  894,
-          918,  669, 1208,  453,  657,  820,  127,  120,  822,  833,
+          918,  669, 1206,  453,  657,  820,  127,  120,  822,  833,
           251,  470,  252,-32766,  397,-32766,-32766,-32766,  439,  472,
-          227,  229,-32766,  231,-32766,-32766,-32766, 1197,  253, 1167,
-          100,  607,  824,  637, 1196,-32766, 1168,-32766,-32766,  441,
+          227,  229,-32766,  231,-32766,-32766,-32766, 1195,  253, 1165,
+          100,  607,  824,  637, 1194,-32766, 1166,-32766,-32766,  441,
            41,  352,  321,  645,-32766,  442,-32766,-32766,-32766,  811,
           268,  502,   35,   18,  444,  625,  445,  329,  446,  390,
           447,-32766,  402,  508,  448,  406,   23,  589,   36,   37,
@@ -325,23 +325,23 @@ class HackLang extends \PhpParser\ParserAbstract
           811,    0,    0,   35,   18,  444,    0,  445, 1081,  446,
          -375,  447,    3,   16,  327,  448,    0,    0,    0,   36,
            37,  449,  361,  367,   38,  450,  404,  510,   63,  379,
-          380,  319,  320, 1176, 1178,  660,  441,   33,   34,  453,
-          666,  667,  442,  765, 1155,  805,  811,  806,  819,   35,
+          380,  319,  320, 1174, 1176,  660,  441,   33,   34,  453,
+          666,  667,  442,  765, 1210,  805,  811,  806,  819,   35,
            18,  444,  807,  445,  813,  446,  802,  447,  872,  857,
-          863,  448, 1158,  864,  800,   36,   37,  449,  824,  637,
+          863,  448, 1156,  864,  800,   36,   37,  449,  824,  637,
            38,  450,  854,  852,   63,  925,  926,  319,  320,  923,
           810,  922,  763,  764,  818,  453,  924,  798,  383,  638,
           646,  648,  649,  653,  654,  655,  656,  659,  661,  663,
           664,  668,  670,   72,  292,  293,  376,  377,  641,    0,
-         1142,  762,  761, 1172,  824,  637, -442, 1202, 1141, 1201,
-          829,  836, 1032, 1205, 1033, 1206,  827,  931,  861,  862,
-          839,  838,  837, 1034, 1199, 1200,  771,  772,  769,  770,
+         1142,  762,  761, 1170,  824,  637, -442, 1200, 1141, 1199,
+          829,  836, 1032, 1203, 1033, 1204,  827,  931,  861,  862,
+          839,  838,  837, 1034, 1197, 1198,  771,  772,  769,  770,
          1139, 1102, 1095, 1107, 1112, 1115,    0, -440, -420, -419,
          -418,   21,   24,   25,   32,   39,   65,   67,   68,   69,
            70,   71,  124,  132,  134,  221,  223,  224,  242,  244,
           245,  246,  247,  281,  282,  305,  384,  389,  243,    0,
          -213, -212,    7,    8,    9,  421,  424,  426,  428,  429,
-          432,  433,  436,  621, 1055, 1063, 1164, 1198, -510, -509,
+          432,  433,  436,  621, 1055, 1063, 1162, 1196, -508, -507,
          -216,  547, 1009,    6,   10,   20,  275,  330,  542,  569,
           624, 1013, 1010,    0, -386, 1026,    0, 1064, 1093, 1094,
          1106, 1137,  581
@@ -499,7 +499,7 @@ class HackLang extends \PhpParser\ParserAbstract
           539,  577,  539,  539,  577,  600,  539,   63,  787,  601,
           605,  788,  579,   65,  789,  785,  790,  808,  791,  609,
           722,  621,  638,  797,  798,  792,  613,  598,  796,  783,
-          663,  677,  568,  364,  652,  576,  781,  678,   74,  562,
+          663,  677,  568,  364,  652,  576,  781,   74,  678,  562,
           662,  574,  565,  590,  163,  294,  543,  544,  784,  567,
           567,  567,  576,  779,  567,  567,  567,  567,  567,  567,
           567,  567,  845,  654,  626,  679,  681,  682,  402,  686,
@@ -577,19 +577,19 @@ class HackLang extends \PhpParser\ParserAbstract
         32767,32767,32767,32767,32767,32767,32767,32767,  457,32767,
         32767,32767,32767,32767,32767,32767,32767,32767,32767,32767,
         32767,32767,32767,32767,32767,32767,32767,32767,32767,  340,
-          341,  343,  344,  278,  414,  232,  500,  456,  277,  116,
-          241,  234,  189,  220,  119,  276,  520,  514,  539,  305,
+          341,  343,  344,  278,  414,  232,  498,  456,  277,  116,
+          241,  234,  189,  220,  119,  276,  518,  512,  537,  305,
           358,  307,  356,  360,  306,  283,  287,  288,  289,  290,
           291,  292,  293,  294,  295,  296,  297,  298,  282,  359,
           337,  336,  335,32767,  303,  304,  308,  310,  281,  309,
           326,  327,  324,  325,  328,  329,  330,  331,  332,32767,
         32767,  451,  451,32767,32767,32767,32767,32767,32767,32767,
         32767,32767,32767,32767,  263,  263,  263,  263,  263,  263,
-          224,  224,  224,  224,  224,  224,  224,  504,32767,32767,
+          224,  224,  224,  224,  224,  224,  224,  502,32767,32767,
         32767,32767,32767,32767,32767,  224,32767,32767,32767,32767,
         32767,32767,32767,  317,  318,32767,  263,  261,32767,32767,
           264,32767,32767,32767,  405,  334,  312,  313,  311,32767,
-          385,  515,  515,32767,  387,32767,32767,  515,  300,  302,
+          385,  513,  513,32767,  387,32767,32767,  513,  300,  302,
           380,  284,32767,32767,32767,32767,32767,32767,32767,32767,
         32767,32767,32767,32767,32767,32767,32767,32767,32767,32767,
         32767,32767,32767,32767,  382,  415,  415,32767,32767,32767,
@@ -599,16 +599,16 @@ class HackLang extends \PhpParser\ParserAbstract
           415,32767,32767,  314,  315,  316,32767,32767,32767,32767,
         32767,32767,  415,  475,32767,  415,32767,32767,  415,32767,
         32767,32767,32767,32767,32767,32767,32767,32767,32767,32767,
-        32767,  490,32767,  490,  161,32767,32767,  388,  388,32767,
+        32767,  488,32767,  488,  161,32767,32767,  388,  388,32767,
           481,  481,  481,  161,  481,  383,  161,32767,32767,  161,
           161,  411,  161,  174,32767,  161,  161,  163,  172,32767,
         32767,  176,  172,32767,  429,  176,32767,  176,  172,  194,
-          194,  366,  176,  491,  226,  226,  366,  161,  226,  226,
+          194,  366,  176,  489,  226,  226,  366,  161,  226,  226,
           226,  161,  226,  226,  161,  163,  226,32767,32767,32767,
         32767,32767,   82,  430,32767,32767,32767,32767,32767,32767,
         32767,32767,32767,32767,32767,32767,32767,32767,32767,32767,
           376,32767,32767,32767,32767,  406,  427,32767,32767,  374,
-        32767,  222,32767,  221,32767,  215,32767,32767,  492,  320,
+        32767,  222,32767,  221,32767,  215,32767,32767,  490,  320,
           321,  323,32767,  417,  345,  346,  347,  348,  349,  350,
           351,  353,32767,  379,32767,32767,32767,32767,32767,32767,
            84,  108,  240,32767,  464,   84,  377,32767,  464,32767,
@@ -617,14 +617,14 @@ class HackLang extends \PhpParser\ParserAbstract
         32767,  319,  391,  433,32767,32767,32767,32767,32767,32767,
         32767,32767,  416,32767,32767,32767,   84,32767,  175,32767,
         32767,32767,32767,32767,  219,32767,32767,32767,32767,32767,
-        32767,  177,32767,32767,32767,  506,32767,32767,32767,32767,
+        32767,  177,32767,32767,32767,  504,32767,32767,32767,32767,
         32767,  415,32767,32767,32767,32767,32767,32767,  275,32767,
         32767,32767,32767,32767,32767,32767,32767,  415,32767,32767,
-        32767,32767,  519,32767,32767,32767,32767,32767,32767,32767,
+        32767,32767,  517,32767,32767,32767,32767,32767,32767,32767,
         32767,32767,32767,32767,32767,32767,32767,32767,32767,32767,
         32767,32767,   82,   60,32767,  257,32767,32767,32767,32767,
-        32767,32767,32767,32767,32767,32767,32767,32767,32767,  508,
-        32767,32767,32767,32767,32767,32767,  513,  121,  121,    3,
+        32767,32767,32767,32767,32767,32767,32767,32767,32767,  506,
+        32767,32767,32767,32767,32767,32767,  511,  121,  121,    3,
             3,  121,  121,  121,  121,  121,  121,  121,  121,  121,
           121,  121,  121,  121,  121,  121,  121,  121,  121,  243,
           154,  243,  202,  243,  243,  205,  194,  194,  243,  249,
@@ -651,8 +651,8 @@ class HackLang extends \PhpParser\ParserAbstract
           505, 1086,  595,  602,  606, 1132,  618,  332,  269,  269,
           333,  885,  885, 1121, 1121,  523,  505,  365,  587,  350,
           350,  348,  348,  288,  289,  315,  528,  291,  362,  316,
-          368,  571, 1173,  579,  579, 1174,  363, 1156, 1156,  363,
-          788, 1194, 1195, 1154, 1157, 1147, 1148,  898,  482,  482,
+          368,  571, 1171,  579,  579, 1172,  363, 1154, 1154,  363,
+          788, 1192, 1193, 1209, 1155, 1147, 1148,  898,  482,  482,
           482,  482,  482,  482,  482,  482,  482,  482,  482,  482,
           482,  482,  482,  337, 1042,  493,  513,  407,  493,  524,
           627,  412,  537,  538,  505,  505,  521,  546,  505,  544,
@@ -665,11 +665,11 @@ class HackLang extends \PhpParser\ParserAbstract
           623, 1131,  561,  311,  375,  422,  284,  526,  541,  273,
           349, 1044, 1097,  556,  585,  530,  550,  889,  359,  945,
          1150,  270,  434,  512, 1134,  580,  317,  633, 1004, 1108,
-          369,  357,  777, 1183,  343,  346, 1166,  775,  774,  774,
-          782,  782,  782,  906,  784,  647, 1204,  773,  373,  593,
+          369,  357,  777, 1181,  343,  346, 1164,  775,  774,  774,
+          782,  782,  782,  906,  784,  647, 1202,  773,  373,  593,
          1040,  473,  473,  473,  473,  473,  473,  473,  473,  473,
           473,  473,  473,  473,  473,  473,  473,  473,  473,  473,
-          473,  473,  473,  473, 1035,  909, 1046,  785, 1160, 1046,
+          473,  473,  473,  473, 1035,  909, 1046,  785, 1158, 1046,
          1105,  634,  430, 1105,    0,  859,    0,  312,  313,    0,
           937,    0,    0,  937,    0,    0,    0,    0,    0,    0,
          1116, 1116,    0,    0,    0,    0,  478,  478,  478,  849,
@@ -696,7 +696,7 @@ class HackLang extends \PhpParser\ParserAbstract
            28,   28,   28,   28,   28,   28,   28,    8,   10,   10,
            87,   63,   58,   10,   58,   10,   11,   10,   12,   58,
             8,    8,    8,  122,  122,   10,   10,   10,   29,   55,
-            8,   45,   55,   55,   55,  122,   55,   55,  135,  135,
+            8,   45,   55,   55,   55,  122,   55,   55,  134,  134,
            55,   68,   68,   68,   68,    8,    8,   45,   45,   45,
            45,   45,   45,   45,   45,   45,   45,   45,   45,   45,
            45,   45,   72,   72,   72,   72,   72,   72,   72,   72,
@@ -711,13 +711,13 @@ class HackLang extends \PhpParser\ParserAbstract
            19,    7,    7,    7,   54,   54,   54,   54,   54,  121,
           121,  118,    7,    7,    7,   57,   73,  127,  127,   57,
           127,  121,   61,   61,   61,   57,  109,  112,  112,  109,
-           42,   73,   73,   35,   35,    2,    2,   70,  129,   91,
-          124,   89,   71,   56,  121,   90,   14,  140,   93,  115,
-           18,  134,   21,  142,    9,   13,  133,   20,   19,   19,
-           19,   19,   19,   76,   19,   65,   88,   19,   17,  132,
+           42,   73,   73,   35,   35,    2,    2,   70,  128,   91,
+          124,   89,   71,   56,  121,   90,   14,  139,   93,  115,
+           18,  133,   21,  141,    9,   13,  132,   20,   19,   19,
+           19,   19,   19,   76,   19,   65,   88,   19,   17,  131,
           101,   51,   51,   51,   51,   51,   51,   51,   51,   51,
            51,   51,   51,   51,   51,   51,   51,   51,   51,   51,
-           51,   51,   51,   51,   99,   78,   51,   22,  130,   51,
+           51,   51,   51,   51,   99,   78,   51,   22,  129,   51,
            77,   53,   97,   77,   -1,   62,   -1,   63,   63,   -1,
            87,   -1,   -1,   87,   -1,   -1,   -1,   -1,   -1,   -1,
            77,   77,   -1,   -1,   -1,   -1,   51,   51,   51,   51,
@@ -740,9 +740,9 @@ class HackLang extends \PhpParser\ParserAbstract
            59,   70,    0,   60,    0,   57,    0,  -44,    0,  -14,
             0,  -43,    0,    0,    0,    0,  -40,    0,    0,   26,
           -11,   44,  283,    0,    0,   43,    0,    0,   69,    0,
-          225,   17, -119,    0,   66,    0,  -90,  -94,    0,   65,
-          -45,    0,  -34,   39,   35,  167,    0,    0,    0,    0,
-           45,    0,   46,    0
+          225,   17, -119,    0,   66,    0,  -90,  -94,   65,  -45,
+            0,  -34,   39,   35,  167,    0,    0,    0,    0,   45,
+            0,   46,    0,    0
     );
 
     protected $gotoDefault = array(
@@ -754,13 +754,13 @@ class HackLang extends \PhpParser\ParserAbstract
           826,  326,  603,  539,  474,  590,  462,  411,  551,  234,
           525,  548,  858,  309,  866,  652,  874,  877,  463,  475,
           888,  400,  896, 1060,  356,  901,  907, 1092,  910,  913,
-          248,  372,  917,    4,  921,  615,  616,  936, 1203,  267,
+          248,  372,  917,    4,  921,  615,  616,  936, 1201,  267,
           560,  944,  956,  388, 1023, 1025,  509,  425, 1036,  408,
           374, 1039, 1096,  398,  464,  413, 1052,  290,  314,  272,
           465,  274,  492, 1124,  466,  414, 1099,  351, 1119,  401,
-         1126, 1133,  307,  549, 1149,  364, 1153,  418,  467,  358,
-         1159,  423,  568, 1165,  334,  266,  468, 1209,  565,  566,
-          628,  629, 1182,  255
+         1126, 1133,  307,  549, 1149,  364, 1153,  418,  358, 1157,
+          423,  568, 1163,  334,  266,  467, 1207,  565,  566,  628,
+          629, 1180,  255,  468
     );
 
     protected $ruleToNonTerminal = array(
@@ -812,12 +812,12 @@ class HackLang extends \PhpParser\ParserAbstract
           118,  118,  112,  112,  119,  119,  120,  120,  120,  120,
           109,  109,  109,  109,  122,  121,  121,  121,  121,  121,
           121,  121,  123,  123,  123,  124,  124,  124,  125,  125,
-          126,  127,  127,  128,   29,  129,  129,  130,  131,  131,
+          126,  127,  127,  128,  128,  129,  130,  130,  131,  131,
           132,  132,  133,  133,  134,  134,  135,  135,  136,  136,
-          137,  137,  138,  138,  139,  139,  139,  139,  140,  140,
-          140,  141,  141,  142,  142,  143,  143,  143,  143,   91,
-           91,   54,   73,   72,   72,   72,   72,   72,   12,   12,
-           12,   12,   79,   79,   11,   11,    5,   45,   23,   23
+          137,  137,  138,  138,  138,  138,  139,  139,  139,  140,
+          140,  141,  141,  142,  142,  142,  142,   91,   91,   54,
+           73,   72,   72,   72,   72,   72,   12,   12,   12,   12,
+           79,   79,   11,   11,    5,   45,   23,   23,  143,   29
     );
 
     protected $ruleToLength = array(
@@ -869,12 +869,12 @@ class HackLang extends \PhpParser\ParserAbstract
             1,    0,    0,    2,    3,    1,    3,    1,    4,    2,
             2,    2,    1,    2,    1,    1,    4,    3,    3,    3,
             6,    3,    1,    1,    1,    1,    3,    3,    1,    3,
-            3,    0,    1,    4,    2,    1,    3,    4,    1,    2,
-            0,    1,    1,    4,    1,    3,    3,    4,    1,    3,
-            3,    5,    1,    3,    0,    1,    1,    3,    1,    2,
-            0,    1,    3,    5,    7,    0,    1,    1,    1,    2,
-            4,    2,    4,    2,    2,    4,    4,    8,    8,    9,
-            8,    7,   10,   11,   11,   12,    1,    1,    1,    3
+            3,    0,    1,    1,    3,    4,    1,    2,    0,    1,
+            1,    4,    1,    3,    3,    4,    1,    3,    3,    5,
+            1,    3,    0,    1,    1,    3,    1,    2,    0,    1,
+            3,    5,    7,    0,    1,    1,    1,    2,    4,    2,
+            4,    2,    2,    4,    4,    8,    8,    9,    8,    7,
+           10,   11,   11,   12,    1,    1,    1,    3,    4,    2
     );
 
     protected function reduceRule0() {
@@ -2822,242 +2822,242 @@ class HackLang extends \PhpParser\ParserAbstract
     }
 
     protected function reduceRule483() {
-         echo('Test');
+         $this->semValue = $this->semValue = array($this->semStack[$this->stackPos-(1-1)]);
     }
 
     protected function reduceRule484() {
-         $this->semValue = $this->semStack[$this->stackPos-(2-1)]; echo('test');
+         $this->semValue = $this->semStack[$this->stackPos-(3-1)][] = $this->semStack[$this->stackPos-(3-3)]; $this->semValue = $this->semStack[$this->stackPos-(3-1)];
     }
 
     protected function reduceRule485() {
-         $this->semValue = $this->semValue = array($this->semStack[$this->stackPos-(1-1)]);
-    }
-
-    protected function reduceRule486() {
-         $this->semValue = $this->semStack[$this->stackPos-(3-1)][] = $this->semStack[$this->stackPos-(3-3)]; $this->semValue = $this->semStack[$this->stackPos-(3-1)];
-    }
-
-    protected function reduceRule487() {
          $this->semValue = new Node\Const_($this->semStack[$this->stackPos-(4-1)], $this->semStack[$this->stackPos-(4-3)], $this->startAttributeStack[$this->stackPos-(4-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule488() {
+    protected function reduceRule486() {
          $this->semValue = array($this->semStack[$this->stackPos-(1-1)]);
     }
 
-    protected function reduceRule489() {
+    protected function reduceRule487() {
          $this->semStack[$this->stackPos-(2-1)][] = $this->semStack[$this->stackPos-(2-2)]; $this->semValue = $this->semStack[$this->stackPos-(2-1)];
     }
 
-    protected function reduceRule490() {
+    protected function reduceRule488() {
          $this->semValue = array();
     }
 
-    protected function reduceRule491() {
+    protected function reduceRule489() {
          $this->semValue = $this->semStack[$this->stackPos-(1-1)];
     }
 
-    protected function reduceRule492() {
+    protected function reduceRule490() {
          $this->semValue = new PhackNode\UserAttribute($this->semStack[$this->stackPos-(1-1)], $this->semValue = array(), $this->startAttributeStack[$this->stackPos-(1-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule493() {
+    protected function reduceRule491() {
          $this->semValue = new PhackNode\UserAttribute($this->semStack[$this->stackPos-(4-1)], $this->semStack[$this->stackPos-(4-3)], $this->startAttributeStack[$this->stackPos-(4-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule494() {
+    protected function reduceRule492() {
          $this->semValue = $this->semValue = array($this->semStack[$this->stackPos-(1-1)]);
+    }
+
+    protected function reduceRule493() {
+         $this->semValue = $this->semStack[$this->stackPos-(3-1)][] = $this->semStack[$this->stackPos-(3-3)]; $this->semValue = $this->semStack[$this->stackPos-(3-1)];
+    }
+
+    protected function reduceRule494() {
+         $this->semValue = $this->semStack[$this->stackPos-(3-2)];
     }
 
     protected function reduceRule495() {
-         $this->semValue = $this->semStack[$this->stackPos-(3-1)][] = $this->semStack[$this->stackPos-(3-3)]; $this->semValue = $this->semStack[$this->stackPos-(3-1)];
-    }
-
-    protected function reduceRule496() {
-         $this->semValue = $this->semStack[$this->stackPos-(3-2)];
-    }
-
-    protected function reduceRule497() {
          $this->semValue = array_merge($this->semStack[$this->stackPos-(4-1)], $this->semStack[$this->stackPos-(4-3)]);
     }
 
-    protected function reduceRule498() {
+    protected function reduceRule496() {
          $this->semValue = $this->semValue = array(new Node\Param(substr($this->semStack[$this->stackPos-(1-1)], 1), null, null, false, false, $this->startAttributeStack[$this->stackPos-(1-1)] + $this->endAttributes));
     }
 
-    protected function reduceRule499() {
+    protected function reduceRule497() {
          $this->semValue = $this->semStack[$this->stackPos-(3-2)];
     }
 
-    protected function reduceRule500() {
+    protected function reduceRule498() {
          $this->semValue = new PhackExpr\Lambda($this->semStack[$this->stackPos-(3-1)], $this->semValue = array(new Stmt\Return_($this->semStack[$this->stackPos-(3-3)], $this->startAttributeStack[$this->stackPos-(3-1)] + $this->endAttributes)), $this->startAttributeStack[$this->stackPos-(3-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule501() {
+    protected function reduceRule499() {
          $this->semValue = new PhackExpr\Lambda($this->semStack[$this->stackPos-(5-1)], $this->semStack[$this->stackPos-(5-4)], $this->startAttributeStack[$this->stackPos-(5-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule502() {
+    protected function reduceRule500() {
          $this->semValue = $this->semValue = array($this->semStack[$this->stackPos-(1-1)]);
     }
 
-    protected function reduceRule503() {
+    protected function reduceRule501() {
          $this->semValue = $this->semStack[$this->stackPos-(3-1)][] = $this->semStack[$this->stackPos-(3-3)]; $this->semValue = $this->semStack[$this->stackPos-(3-1)];
     }
 
-    protected function reduceRule504() {
+    protected function reduceRule502() {
          $this->semValue = $this->semValue = array(false);
     }
 
-    protected function reduceRule505() {
+    protected function reduceRule503() {
          $this->semValue = $this->semValue = array(true);
     }
 
-    protected function reduceRule506() {
+    protected function reduceRule504() {
          $this->semValue = $this->semStack[$this->stackPos-(1-1)][] = false; $this->semValue = $this->semStack[$this->stackPos-(1-1)];
     }
 
-    protected function reduceRule507() {
+    protected function reduceRule505() {
          $this->semValue = $this->semStack[$this->stackPos-(3-1)][] = true; $this->semValue = $this->semStack[$this->stackPos-(3-1)];
     }
 
-    protected function reduceRule508() {
+    protected function reduceRule506() {
          $this->semValue = $this->semStack[$this->stackPos-(1-1)];
     }
 
-    protected function reduceRule509() {
+    protected function reduceRule507() {
          $this->semValue = $this->semStack[$this->stackPos-(2-1)];
     }
 
-    protected function reduceRule510() {
+    protected function reduceRule508() {
          $this->semValue = array();
     }
 
-    protected function reduceRule511() {
+    protected function reduceRule509() {
          $this->semValue = array($this->semStack[$this->stackPos-(1-1)]);
     }
 
-    protected function reduceRule512() {
+    protected function reduceRule510() {
          $this->semStack[$this->stackPos-(3-1)][] = $this->semStack[$this->stackPos-(3-3)]; $this->semValue = $this->semStack[$this->stackPos-(3-1)];
     }
 
-    protected function reduceRule513() {
+    protected function reduceRule511() {
          $this->semValue = new PhackNode\Param(substr($this->semStack[$this->stackPos-(5-5)], 1), null, $this->semStack[$this->stackPos-(5-2)], $this->semStack[$this->stackPos-(5-3)], $this->semStack[$this->stackPos-(5-4)], $this->semStack[$this->stackPos-(5-1)], $this->startAttributeStack[$this->stackPos-(5-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule514() {
+    protected function reduceRule512() {
          $this->semValue = new PhackNode\Param(substr($this->semStack[$this->stackPos-(7-5)], 1), $this->semStack[$this->stackPos-(7-7)], $this->semStack[$this->stackPos-(7-2)], $this->semStack[$this->stackPos-(7-3)], $this->semStack[$this->stackPos-(7-4)], $this->semStack[$this->stackPos-(7-1)], $this->startAttributeStack[$this->stackPos-(7-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule515() {
+    protected function reduceRule513() {
          $this->semValue = null;
     }
 
-    protected function reduceRule516() {
+    protected function reduceRule514() {
          $this->semValue = Stmt\Class_::MODIFIER_PUBLIC;
     }
 
-    protected function reduceRule517() {
+    protected function reduceRule515() {
          $this->semValue = Stmt\Class_::MODIFIER_PROTECTED;
     }
 
-    protected function reduceRule518() {
+    protected function reduceRule516() {
          $this->semValue = Stmt\Class_::MODIFIER_PRIVATE;
     }
 
-    protected function reduceRule519() {
+    protected function reduceRule517() {
          $this->semValue = new PhackStmt\PropertyProperty(substr($this->semStack[$this->stackPos-(2-2)], 1), null, $this->semStack[$this->stackPos-(2-1)], $this->startAttributeStack[$this->stackPos-(2-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule520() {
+    protected function reduceRule518() {
          $this->semValue = new PhackStmt\PropertyProperty(substr($this->semStack[$this->stackPos-(4-2)], 1), $this->semStack[$this->stackPos-(4-4)], $this->semStack[$this->stackPos-(4-1)], $this->startAttributeStack[$this->stackPos-(4-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule521() {
+    protected function reduceRule519() {
          $this->semValue = $this->semStack[$this->stackPos-(2-1)];
     }
 
-    protected function reduceRule522() {
+    protected function reduceRule520() {
          $this->semValue = $this->semStack[$this->stackPos-(4-2)];
     }
 
-    protected function reduceRule523() {
+    protected function reduceRule521() {
          $this->semValue = new PhackNode\SoftNullableType($this->semStack[$this->stackPos-(2-2)], false, true, $this->startAttributeStack[$this->stackPos-(2-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule524() {
+    protected function reduceRule522() {
          $this->semValue = new PhackNode\SoftNullableType($this->semStack[$this->stackPos-(2-2)], true, false, $this->startAttributeStack[$this->stackPos-(2-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule525() {
+    protected function reduceRule523() {
          $this->semValue = new PhackNode\GenericsType($this->semStack[$this->stackPos-(4-1)], $this->semStack[$this->stackPos-(4-3)], $this->startAttributeStack[$this->stackPos-(4-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule526() {
+    protected function reduceRule524() {
          $this->semValue = new PhackNode\GenericsType('array', $this->semStack[$this->stackPos-(4-3)], $this->startAttributeStack[$this->stackPos-(4-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule527() {
+    protected function reduceRule525() {
          $this->semValue = new PhackNode\CallableType($this->semStack[$this->stackPos-(8-5)], $this->semStack[$this->stackPos-(8-7)], $this->semStack[$this->stackPos-(8-3)], $this->startAttributeStack[$this->stackPos-(8-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule528() {
+    protected function reduceRule526() {
          $this->semValue = new PhackStmt\Class_($this->semStack[$this->stackPos-(8-2)], ['type' => $this->semStack[$this->stackPos-(8-1)], 'extends' => $this->semStack[$this->stackPos-(8-4)],
 	                                   'implements' => $this->semStack[$this->stackPos-(8-5)], 'stmts' => $this->semStack[$this->stackPos-(8-7)],
 	                                   'generics' => $this->semStack[$this->stackPos-(8-3)]], $this->startAttributeStack[$this->stackPos-(8-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule529() {
+    protected function reduceRule527() {
          $this->semValue = new PhackStmt\Class_($this->semStack[$this->stackPos-(9-3)], ['type' => $this->semStack[$this->stackPos-(9-2)], 'extends' => $this->semStack[$this->stackPos-(9-5)],
 	                                   'implements' => $this->semStack[$this->stackPos-(9-6)], 'stmts' => $this->semStack[$this->stackPos-(9-8)],
 	                                   'generics' => $this->semStack[$this->stackPos-(9-4)], 'user_attributes' => $this->semStack[$this->stackPos-(9-1)]], $this->startAttributeStack[$this->stackPos-(9-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule530() {
+    protected function reduceRule528() {
          $this->semValue = new PhackStmt\Enum($this->semStack[$this->stackPos-(8-3)], $this->semStack[$this->stackPos-(8-5)], $this->semStack[$this->stackPos-(8-7)], $this->startAttributeStack[$this->stackPos-(8-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule531() {
+    protected function reduceRule529() {
          $this->semValue = new PhackStmt\Enum($this->semStack[$this->stackPos-(7-2)], $this->semStack[$this->stackPos-(7-4)], $this->semStack[$this->stackPos-(7-6)], $this->startAttributeStack[$this->stackPos-(7-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule532() {
+    protected function reduceRule530() {
          $this->semValue = new PhackStmt\ClassMethod($this->semStack[$this->stackPos-(10-4)], ['type' => $this->semStack[$this->stackPos-(10-1)], 'byRef' => $this->semStack[$this->stackPos-(10-3)], 'params' => $this->semStack[$this->stackPos-(10-7)],
 	                                        'returnType' => $this->semStack[$this->stackPos-(10-9)], 'stmts' => $this->semStack[$this->stackPos-(10-10)],
 	                                        'generics' => $this->semStack[$this->stackPos-(10-5)]], $this->startAttributeStack[$this->stackPos-(10-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule533() {
+    protected function reduceRule531() {
          $this->semValue = new PhackStmt\ClassMethod($this->semStack[$this->stackPos-(11-5)], ['type' => $this->semStack[$this->stackPos-(11-2)], 'byRef' => $this->semStack[$this->stackPos-(11-4)], 'params' => $this->semStack[$this->stackPos-(11-8)],
 	                                        'returnType' => $this->semStack[$this->stackPos-(11-10)], 'stmts' => $this->semStack[$this->stackPos-(11-11)],
 	                                        'generics' => $this->semStack[$this->stackPos-(11-6)], 'user_attributes' => $this->semStack[$this->stackPos-(11-1)]], $this->startAttributeStack[$this->stackPos-(11-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule534() {
+    protected function reduceRule532() {
          $this->semValue = new PhackStmt\Function_($this->semStack[$this->stackPos-(11-3)], ['byRef' => $this->semStack[$this->stackPos-(11-2)], 'params' => $this->semStack[$this->stackPos-(11-6)],
 	                                      'returnType' => $this->semStack[$this->stackPos-(11-8)], 'stmts' => $this->semStack[$this->stackPos-(11-10)],
 	                                      'generics' => $this->semStack[$this->stackPos-(11-4)]], $this->startAttributeStack[$this->stackPos-(11-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule535() {
+    protected function reduceRule533() {
          $this->semValue = new PhackStmt\Function_($this->semStack[$this->stackPos-(12-4)], ['byRef' => $this->semStack[$this->stackPos-(12-3)], 'params' => $this->semStack[$this->stackPos-(12-7)],
 	                                      'returnType' => $this->semStack[$this->stackPos-(12-9)], 'stmts' => $this->semStack[$this->stackPos-(12-11)],
 	                                      'generics' => $this->semStack[$this->stackPos-(12-5)], 'user_attributes' => $this->semStack[$this->stackPos-(12-1)]], $this->startAttributeStack[$this->stackPos-(12-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule536() {
+    protected function reduceRule534() {
         $this->semValue = $this->semStack[$this->stackPos];
     }
 
-    protected function reduceRule537() {
+    protected function reduceRule535() {
          $this->semValue = new PhackExpr\PipeVar($this->startAttributeStack[$this->stackPos-(1-1)] + $this->endAttributes);
     }
 
-    protected function reduceRule538() {
+    protected function reduceRule536() {
          $this->semValue = $this->semStack[$this->stackPos-(1-1)];
     }
 
-    protected function reduceRule539() {
+    protected function reduceRule537() {
          $this->semValue = new PhackExpr\Pipe($this->semStack[$this->stackPos-(3-1)], $this->semStack[$this->stackPos-(3-3)], $this->startAttributeStack[$this->stackPos-(3-1)] + $this->endAttributes);
+    }
+
+    protected function reduceRule538() {
+          $this->semValue = new PhackStmt\Alias($this->semStack[$this->stackPos-(4-2)], $this->semStack[$this->stackPos-(4-4)], $this->startAttributeStack[$this->stackPos-(4-1)] + $this->endAttributes);
+    }
+
+    protected function reduceRule539() {
+         $this->semValue = $this->semStack[$this->stackPos-(2-1)];
     }
 }

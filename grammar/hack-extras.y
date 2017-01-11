@@ -184,12 +184,12 @@ expr:
 	| expr T_PIPE expr { $$ = PhackExpr\Pipe[$1, $3]; }
 ;
 
-hack_type:
-			T_TYPE T_STRING '=' type	 { echo('Test');}
+hack_alias_declaration_statement:
+	T_TYPE T_STRING '=' type	 {  $$ = PhackStmt\Alias[$2, $4];}
 ;
 
 non_empty_statement:
-			hack_type ';'		{ $$ = $1; echo('test');}
+	hack_alias_declaration_statement ';'		{ $$ = $1;}
 ;
 			
 			
