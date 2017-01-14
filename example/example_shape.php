@@ -1,0 +1,1 @@
+<?hh shape('x' => int);

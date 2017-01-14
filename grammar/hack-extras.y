@@ -213,5 +213,21 @@ encaps_var:
                               
 ;
 			
+dereferencable_scalar:
+      T_SHAPE '(' shape_pair_list ')'		          { $$ = new PhackExpr\Shape($3); }
+			
+shape_pair_list:
+      /* empty */                                           { $$ = array(); }
+    | non_empty_shape_pair_list optional_comma              { $$ = $1; }
+;
+
+non_empty_shape_pair_list:
+      non_empty_shape_pair_list ',' shape_pair              { push($1, $3); }
+    | shape_pair                                            { init($1); }
+;
+
+shape_pair:
+      expr T_DOUBLE_ARROW type                { $$ = PhackExpr\ShapeItem[$1, $3]; }
+;
 			
 			

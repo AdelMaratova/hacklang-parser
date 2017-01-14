@@ -13,6 +13,7 @@ class HackLang extends \PhpParser\Lexer\Emulative {
     const T_SUPER = 2006;
     const T_TYPE = 2007;
     const T_NULLSAFE = 2008;
+    const T_SHAPE = 2009;
 
     public function __construct(array $options = array()) {
         parent::__construct($options);
@@ -26,6 +27,7 @@ class HackLang extends \PhpParser\Lexer\Emulative {
         $this->tokenMap[self::T_SUPER]        = Tokens::T_SUPER;
 		$this->tokenMap[self::T_TYPE]	      = Tokens::T_TYPE;
 		$this->tokenMap[self::T_NULLSAFE]	  = Tokens::T_NULLSAFE;
+		$this->tokenMap[self::T_SHAPE]	  = Tokens::T_SHAPE;
     }
 
     /*
@@ -203,17 +205,20 @@ class HackLang extends \PhpParser\Lexer\Emulative {
             ) {
                 $this->tokens[$i][0] = self::T_ENUM;
 
-		// Replace `type` strings to T_TYPE
-		} elseif (is_array($this->tokens[$i])
-		&& T_STRING === $this->tokens[$i][0]
-		&& !strcasecmp('type', $this->tokens[$i][1])
-		) {
-			$this->tokens[$i][0] = self::T_TYPE;
+            // second, change `shape` strings to T_SHAPE
+            } elseif (is_array($this->tokens[$i])
+				&& T_STRING === $this->tokens[$i][0]
+				&& !strcasecmp('shape', $this->tokens[$i][1])
+			) {
+				$this->tokens[$i][0] = self::T_SHAPE;
+                
+			// Replace `type` strings to T_TYPE
+			} elseif (is_array($this->tokens[$i])
+			&& T_STRING === $this->tokens[$i][0]
+			&& !strcasecmp('type', $this->tokens[$i][1])
+			) {
+				$this->tokens[$i][0] = self::T_TYPE;
 			
-		
-			
-			
-
             // Replace `super` strings to T_SUPER
             } elseif (is_array($this->tokens[$i])
                 && T_STRING === $this->tokens[$i][0]
