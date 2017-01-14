@@ -12,6 +12,7 @@ class HackLang extends \PhpParser\Lexer\Emulative {
     const T_PIPE_VAR = 2005;
     const T_SUPER = 2006;
     const T_TYPE = 2007;
+    const T_NULLSAFE = 2008;
 
     public function __construct(array $options = array()) {
         parent::__construct($options);
@@ -24,6 +25,7 @@ class HackLang extends \PhpParser\Lexer\Emulative {
         $this->tokenMap[self::T_PIPE_VAR]     = Tokens::T_PIPE_VAR;
         $this->tokenMap[self::T_SUPER]        = Tokens::T_SUPER;
 		$this->tokenMap[self::T_TYPE]	      = Tokens::T_TYPE;
+		$this->tokenMap[self::T_NULLSAFE]	  = Tokens::T_NULLSAFE;
     }
 
     /*
@@ -88,6 +90,7 @@ class HackLang extends \PhpParser\Lexer\Emulative {
     protected function preprocessCode($code) {
         $code = $this->preprocessOpenTag($code);
         $code = str_replace('==>', '~__EMU__LAMBDAARROW__~', $code);
+        $code = str_replace('?->', '~__EMU__NULLSAFE__~', $code);
 
         return parent::preprocessCode($code);
     }
@@ -186,6 +189,12 @@ class HackLang extends \PhpParser\Lexer\Emulative {
                     $c -= 2;
                     $this->fixupLambdaParens($i);
                 }
+                elseif ('NULLSAFE' === $matches[1]) {
+                    array_splice($this->tokens, $i, 3, array(
+                        array(self::T_NULLSAFE, '?->', $this->tokens[$i + 1][2]),
+                    ));
+                    $c -= 2;
+                    }
 
             // second, change `enum` strings to T_ENUM
             } elseif (is_array($this->tokens[$i])
@@ -200,6 +209,10 @@ class HackLang extends \PhpParser\Lexer\Emulative {
 		&& !strcasecmp('type', $this->tokens[$i][1])
 		) {
 			$this->tokens[$i][0] = self::T_TYPE;
+			
+		
+			
+			
 
             // Replace `super` strings to T_SUPER
             } elseif (is_array($this->tokens[$i])
@@ -274,6 +287,8 @@ class HackLang extends \PhpParser\Lexer\Emulative {
     public function restoreContentCallback(array $matches) {
         if ('LAMBDAARROW' === $matches[1]) {
             return '==>';
+        } elseif ('NULLSAFE' === $matches[1]) {
+            return '?->';
         } else {
             return parent::restoreContentCallback($matches);
         }

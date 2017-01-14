@@ -177,19 +177,40 @@ reserved_non_modifiers:
 
 variable:
 	  T_PIPE_VAR { $$ = PhackExpr\PipeVar[]; }
+	| dereferencable T_NULLSAFE property_name        { $$ = PhackExpr\NullSafePropertyFetch[$1, $3]; }
 ;
 
 expr:
 	  hack_lambda { $$ = $1; }
 	| expr T_PIPE expr { $$ = PhackExpr\Pipe[$1, $3]; }
+	
 ;
+
+
+callable_variable:
+  	dereferencable T_NULLSAFE property_name argument_list
+          { $$ = PhackExpr\NullSafeMethodCall[$1, $3, $4]; }
+;  
+
+
 
 hack_alias_declaration_statement:
 	T_TYPE T_STRING '=' type	 {  $$ = PhackStmt\Alias[$2, $4];}
 ;
 
+new_variable:
+     new_variable T_NULLSAFE property_name          { $$ = PhackExpr\NullSafePropertyFetch[$1, $3]; }
+;
+
+
 non_empty_statement:
 	hack_alias_declaration_statement ';'		{ $$ = $1;}
+;
+
+encaps_var:
+        
+    T_VARIABLE T_NULLSAFE T_STRING                 { $$ = PhackExpr\NullSafePropertyFetch[Expr\Variable[parseVar($1)], $3]; }
+                              
 ;
 			
 			

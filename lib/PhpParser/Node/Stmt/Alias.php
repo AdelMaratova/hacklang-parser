@@ -27,6 +27,6 @@ class Alias extends pStmt {
 		    }
 		
 		    public function getSubNodeNames() {
-			        return array('name', 'type', 'values');
+			        return array('name', 'type');
 			    }
 			}
