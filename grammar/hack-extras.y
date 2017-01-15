@@ -215,6 +215,7 @@ encaps_var:
 			
 dereferencable_scalar:
       T_SHAPE '(' shape_pair_list ')'		          { $$ = new PhackExpr\Shape($3); }
+     | T_VECTOR '{' vector_list '}'					{ $$ = new PhackExpr\Vector($3); }	
 			
 shape_pair_list:
       /* empty */                                           { $$ = array(); }
@@ -229,5 +230,16 @@ non_empty_shape_pair_list:
 shape_pair:
       expr T_DOUBLE_ARROW type                { $$ = PhackExpr\ShapeItem[$1, $3]; }
 ;
-			
+	
+vector_list:
+      /* empty */                                           { $$ = array(); }
+    | non_empty_vector_list optional_comma              { $$ = $1; }
+;
+
+non_empty_vector_list:
+      non_empty_vector_list ',' expr              { push($1, $3); }
+    | expr                                            { init($1); }
+;
+
+	
 			

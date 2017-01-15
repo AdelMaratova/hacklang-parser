@@ -14,6 +14,7 @@ class HackLang extends \PhpParser\Lexer\Emulative {
     const T_TYPE = 2007;
     const T_NULLSAFE = 2008;
     const T_SHAPE = 2009;
+    const T_VECTOR = 2010;
 
     public function __construct(array $options = array()) {
         parent::__construct($options);
@@ -28,6 +29,7 @@ class HackLang extends \PhpParser\Lexer\Emulative {
 		$this->tokenMap[self::T_TYPE]	      = Tokens::T_TYPE;
 		$this->tokenMap[self::T_NULLSAFE]	  = Tokens::T_NULLSAFE;
 		$this->tokenMap[self::T_SHAPE]	  = Tokens::T_SHAPE;
+		$this->tokenMap[self::T_VECTOR]	  = Tokens::T_VECTOR;
     }
 
     /*
@@ -204,6 +206,12 @@ class HackLang extends \PhpParser\Lexer\Emulative {
                 && !strcasecmp('enum', $this->tokens[$i][1])
             ) {
                 $this->tokens[$i][0] = self::T_ENUM;
+				
+				// second, change `Vector` strings to T_VECTOR
+			} elseif (is_array ( $this->tokens [$i] ) 
+				&& T_STRING === $this->tokens [$i] [0] 
+				&& ! strcasecmp ( 'Vector', $this->tokens [$i] [1] )) {
+				$this->tokens [$i] [0] = self::T_VECTOR;
 
             // second, change `shape` strings to T_SHAPE
             } elseif (is_array($this->tokens[$i])
