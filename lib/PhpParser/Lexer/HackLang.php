@@ -15,6 +15,12 @@ class HackLang extends \PhpParser\Lexer\Emulative {
     const T_NULLSAFE = 2008;
     const T_SHAPE = 2009;
     const T_VECTOR = 2010;
+    const T_IMMVECTOR = 2011;
+    const T_MAP = 2012;
+    const T_IMMMAP = 2013;
+    const T_SET = 2014;
+    const T_IMMSET = 2015;
+    const T_PAIR = 2016;
 
     public function __construct(array $options = array()) {
         parent::__construct($options);
@@ -28,8 +34,14 @@ class HackLang extends \PhpParser\Lexer\Emulative {
         $this->tokenMap[self::T_SUPER]        = Tokens::T_SUPER;
 		$this->tokenMap[self::T_TYPE]	      = Tokens::T_TYPE;
 		$this->tokenMap[self::T_NULLSAFE]	  = Tokens::T_NULLSAFE;
-		$this->tokenMap[self::T_SHAPE]	  = Tokens::T_SHAPE;
-		$this->tokenMap[self::T_VECTOR]	  = Tokens::T_VECTOR;
+		$this->tokenMap[self::T_SHAPE]	  	  = Tokens::T_SHAPE;
+		$this->tokenMap[self::T_VECTOR]	  	  = Tokens::T_VECTOR;
+		$this->tokenMap[self::T_IMMVECTOR]	  = Tokens::T_IMMVECTOR;
+		$this->tokenMap[self::T_MAP]	  	  = Tokens::T_MAP;
+		$this->tokenMap[self::T_IMMMAP]	  	  = Tokens::T_IMMMAP;
+		$this->tokenMap[self::T_SET]	  	  = Tokens::T_SET;
+		$this->tokenMap[self::T_IMMSET]	  	  = Tokens::T_IMMSET;
+		$this->tokenMap[self::T_PAIR]	  	  = Tokens::T_PAIR;	
     }
 
     /*
@@ -212,6 +224,43 @@ class HackLang extends \PhpParser\Lexer\Emulative {
 				&& T_STRING === $this->tokens [$i] [0] 
 				&& ! strcasecmp ( 'Vector', $this->tokens [$i] [1] )) {
 				$this->tokens [$i] [0] = self::T_VECTOR;
+				
+				// second, change `ImmVector` strings to T_IMMVECTOR
+			} elseif (is_array ( $this->tokens [$i] )
+				&& T_STRING === $this->tokens [$i] [0]
+				&& ! strcasecmp ( 'ImmVector', $this->tokens [$i] [1] )) {
+				$this->tokens [$i] [0] = self::T_IMMVECTOR;
+				
+				// second, change `Map` strings to T_MAP
+			} elseif (is_array ( $this->tokens [$i] )
+				&& T_STRING === $this->tokens [$i] [0]
+				&& ! strcasecmp ( 'Map', $this->tokens [$i] [1] )) {
+				$this->tokens [$i] [0] = self::T_MAP;
+			
+				// second, change `ImmMap` strings to T_IMMMAP
+			} elseif (is_array ( $this->tokens [$i] )
+				&& T_STRING === $this->tokens [$i] [0]
+				&& ! strcasecmp ( 'ImmMap', $this->tokens [$i] [1] )) {
+				$this->tokens [$i] [0] = self::T_IMMMAP;
+			
+				// second, change `Set` strings to T_SET
+			} elseif (is_array ( $this->tokens [$i] )
+				&& T_STRING === $this->tokens [$i] [0]
+				&& ! strcasecmp ( 'Set', $this->tokens [$i] [1] )) {
+				$this->tokens [$i] [0] = self::T_SET;
+			
+				// second, change `ImmSet` strings to T_IMMSET
+			} elseif (is_array ( $this->tokens [$i] )
+				&& T_STRING === $this->tokens [$i] [0]
+				&& ! strcasecmp ( 'Immset', $this->tokens [$i] [1] )) {
+				$this->tokens [$i] [0] = self::T_IMMSET;
+				
+				
+				// second, change `Pair` strings to T_PAIR
+				} elseif (is_array ( $this->tokens [$i] )
+				&& T_STRING === $this->tokens [$i] [0]
+				&& ! strcasecmp ( 'Pair', $this->tokens [$i] [1] )) {
+				$this->tokens [$i] [0] = self::T_PAIR;
 
             // second, change `shape` strings to T_SHAPE
             } elseif (is_array($this->tokens[$i])

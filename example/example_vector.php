@@ -1,7 +1,6 @@
 <?hh
 
-$vec = Vector {1,2,3};
 
 function f () : Vector <int>{
-	
+	return Vector {1,2,3};
 }

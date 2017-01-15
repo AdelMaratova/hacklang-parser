@@ -1,0 +1,119 @@
+% Reading T_FUNCTION
+% Reading T_STRING
+% Reading '('
+% Reading ')'
+% Reading ':'
+% Reading T_VECTOR
+% Reading '<'
+% Reading T_STRING
+% Reading '>'
+% Reading '{'
+% Reading T_RETURN
+% Reading T_VECTOR
+% Reading '{'
+% Reading T_LNUMBER
+% Reading ','
+% Reading T_LNUMBER
+% Reading ','
+% Reading T_LNUMBER
+% Reading '}'
+% Reading ';'
+% Reading '}'
+% Reading EOF
+Array
+(
+    [0] => PhpParser\Node\Stmt\Function_ Object
+        (
+            [byRef] => 
+            [name] => f
+            [params] => Array
+                (
+                )
+
+            [returnType] => PhpLang\Phack\PhpParser\Node\GenericsType Object
+                (
+                    [basetype] => Vector
+                    [subtypes] => Array
+                        (
+                            [0] => int
+                        )
+
+                    [attributes:protected] => Array
+                        (
+                            [startLine] => 4
+                            [endLine] => 4
+                        )
+
+                )
+
+            [stmts] => Array
+                (
+                    [0] => PhpParser\Node\Stmt\Return_ Object
+                        (
+                            [expr] => PhpLang\Phack\PhpParser\Node\Expr\Vector Object
+                                (
+                                    [items] => Array
+                                        (
+                                            [0] => PhpParser\Node\Scalar\LNumber Object
+                                                (
+                                                    [value] => 1
+                                                    [attributes:protected] => Array
+                                                        (
+                                                            [startLine] => 5
+                                                            [endLine] => 5
+                                                            [kind] => 10
+                                                        )
+
+                                                )
+
+                                            [1] => PhpParser\Node\Scalar\LNumber Object
+                                                (
+                                                    [value] => 2
+                                                    [attributes:protected] => Array
+                                                        (
+                                                            [startLine] => 5
+                                                            [endLine] => 5
+                                                            [kind] => 10
+                                                        )
+
+                                                )
+
+                                            [2] => PhpParser\Node\Scalar\LNumber Object
+                                                (
+                                                    [value] => 3
+                                                    [attributes:protected] => Array
+                                                        (
+                                                            [startLine] => 5
+                                                            [endLine] => 5
+                                                            [kind] => 10
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [attributes:protected] => Array
+                                        (
+                                        )
+
+                                )
+
+                            [attributes:protected] => Array
+                                (
+                                    [startLine] => 5
+                                    [endLine] => 5
+                                )
+
+                        )
+
+                )
+
+            [attributes:protected] => Array
+                (
+                    [startLine] => 4
+                    [endLine] => 6
+                )
+
+        )
+
+)

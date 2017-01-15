@@ -123,6 +123,12 @@ type:
 	| '(' T_FUNCTION optional_ref '(' hack_parameter_type_list ')' optional_return_type ')'
 	    { $$ = PhackNode\CallableType[$5, $7, $3]; }
 	| T_VECTOR '<' hack_type_list '>' { $$ = PhackNode\GenericsType['Vector', $3]; }
+	| T_IMMVECTOR '<' hack_type_list '>' { $$ = PhackNode\GenericsType['ImmVector', $3]; }
+	| T_MAP '<' hack_type_list '>' { $$ = PhackNode\GenericsType['Map', $3]; }
+	| T_IMMMAP '<' hack_type_list '>' { $$ = PhackNode\GenericsType['ImmMap', $3]; }
+	| T_SET '<' hack_type_list '>' { $$ = PhackNode\GenericsType['Set', $3]; }
+	| T_IMMSET '<' hack_type_list '>' { $$ = PhackNode\GenericsType['ImmSet', $3]; }
+	| T_PAIR '<' hack_type_list '>' { $$ = PhackNode\GenericsType['Pair', $3]; }
 ;
 
 class_declaration_statement:
@@ -216,7 +222,13 @@ encaps_var:
 			
 dereferencable_scalar:
       T_SHAPE '(' shape_pair_list ')'		          { $$ = new PhackExpr\Shape($3); }
-     | T_VECTOR '{' vector_list '}'					{ $$ = new PhackExpr\Vector($3); }	
+	 | T_MAP '{' map_pair_list '}'				{ $$ = new PhackExpr\Map($3); }
+	 | T_IMMMAP '{' map_pair_list '}'				{ $$ = new PhackExpr\ImmMap($3); }
+     | T_VECTOR '{' vector_list '}'					{ $$ = new PhackExpr\Vector($3); }
+     | T_IMMVECTOR '{' vector_list '}'					{ $$ = new PhackExpr\ImmVector($3); }
+     | T_SET '{' vector_list '}'					{ $$ = new PhackExpr\Set($3); }
+     | T_IMMSET '{' vector_list '}'					{ $$ = new PhackExpr\ImmSet($3); }
+     | T_PAIR '{' expr ',' expr '}'						{ $$ = new PhackExpr\Pair($3, $5); }
 			
 shape_pair_list:
       /* empty */                                           { $$ = array(); }
@@ -242,5 +254,17 @@ non_empty_vector_list:
     | expr                                            { init($1); }
 ;
 
-	
+
+map_pair_list:
+      /* empty */                                           { $$ = array(); }
+    | non_empty_map_pair_list optional_comma              { $$ = $1; }
+;
+
+non_empty_map_pair_list:
+      non_empty_map_pair_list ',' map_pair              { push($1, $3); }
+    | array_pair                                            { init($1); }
+;
+
+map_pair:
+      expr T_DOUBLE_ARROW expr                              { $$ = PhackExpr\MapItem[$3, $1]; }	
 			

@@ -3,16 +3,16 @@
 namespace PhpLang\Phack\PhpParser\Node\Expr;
 use PhpParser\Node as pNode;
 
-	class Vector extends pNode\Expr
+	class Set extends pNode\Expr
 	{
 			
-		/** @var Vector[] Items */
+		/** @var Set[] Items */
 		public $items;
 	
 		/**
-		 * Constructs a vector node.
+		 * Constructs a Set node.
 		 *
-		 * @param ArrayItem[] $items      Items of the array
+		 * @param ArrayItem[] $items      Items of the Set
 		 * @param array       $attributes Additional attributes
 		 */
 		public function __construct(array $items = array(), array $attributes = array()) {
