@@ -122,6 +122,7 @@ type:
 	| T_ARRAY '<' hack_type_list '>' { $$ = PhackNode\GenericsType['array', $3]; }
 	| '(' T_FUNCTION optional_ref '(' hack_parameter_type_list ')' optional_return_type ')'
 	    { $$ = PhackNode\CallableType[$5, $7, $3]; }
+	| T_VECTOR '<' hack_type_list '>' { $$ = PhackNode\GenericsType['Vector', $3]; }
 ;
 
 class_declaration_statement:
