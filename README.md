@@ -1,41 +1,30 @@
-# Phack: HackLang to PHP Transpiler
-
-This project is EXTREMELY EXPERIMENTAL and not ready for prime-time.
-
-Only a few HackLang features are supported at this time, and they aren't fully tested.
+# HackLang parser
 
 ## What is this?
 
-This project is an attempt to make [HackLang](http://www.hacklang.org) code run "out of the box" on a regular PHP runtime without the need for a custom extension (it's all PHP code!).  By supporting all of HackLang's rich typing system, we'll be able to make use of the static typechecker to perform robust analysis while still executing it on the stable and trusted PHP runtime.
+This project is a parser for [HackLang](http://www.hacklang.org) written in PHP. It is based on Sara Golemon's project [Phack](https://github.com/phplang/phack/). It builds an abstract Syntax Tree (AST) from HackLang source code.
 
 Any attempt to use HackLang files which have not passed `hh_client` is a terrible mistake, and you should feel bad.
 
 ## How does it work?
 
-Phack extends [PHP-Parser](https://www.github.com/nikic/PHP-Parser) by amending the PHP 7 parsing rules and overriding the Lexer's pre/post processor hooks.  This produces a usable AST, which can then be "PrettyPrinted" into normal PHP.  The following table shows our roadmap:
-
-| Feature | State | Notes |
-| ------- | ----- | ----- |
-| [Short Lambdas](https://docs.hhvm.com/hack/lambdas) | Alpha | Needs more tests |
-| [Generics](https://docs.hhvm.com/hack/generics) | Alpha | Partial type erasure for PHP compat (base type preserved) |
-| [XHP](https://docs.hhvm.com/hack/XHP) | TBD | XHP-1.x support available through https://www.github.com/phplang/xhp for now, XHP-2.x coming with this library |
-| [Enums](https://docs.hhvm.com/hack/enums) | Alpha | Need to actually implement \InvariantException for full HackLang compat... |
-| [Pipe Op](https://docs.hhvm.com/hack/operators/pipe-operator) | Alpha | Limited to one use of lhs in rhs (unlike HackLang) |
-| [Type Aliasing](https://docs.hhvm.com/hack/type-aliases) | TBD | |
-| [Constructor Parameter Promotion](https://docs.hhvm.com/hack/other-features/constructor-parameter-promotion) | Alpha | |
-| [Prop/Const Typing](https://docs.hhvm.com/hack/types) | Alpha | Props: Yes, Consts: No |
-| [Callable typing](https://docs.hhvm.com/hack/types) | Alpha | |
-| [Soft/Nullable typing](https://docs.hhvm.com/hack/types) | Alpha | Full erasure on soft/nullables. Need logging for soft, and need psuedo statements for nullable checking (or PHP 7.1 nullable type support) |
-| [User Attributes](https://docs.hhvm.com/hack/attributes) | Alpha | UA erasure, need to preserve somewhere for reflection. |
-| [Shapes](https://docs.hhvm.com/hack/shapes) | TBD | |
-| [Collections](https://docs.hhvm.com/hack/collections) | TBD | Static initialization is... complicated... |
-| [Async](https://docs.hhvm.com/hack/async) | Unlikely | PHP's Engine just doesn't support this concept well |
-| Trailing Commas | Alpha | Allow trailing comma in arg/param lists |
+Hack Parser extends [PHP-Parser](https://www.github.com/nikic/PHP-Parser) by amending the PHP 7 parsing rules and overriding the Lexer's pre/post processor hooks.
 
 ## How do I use it?
 
-To include a HackLang file manually, use `\PhpLang\Phack\includeFile()` as you would use `include`, similarly you can use `\PhpLang\Phack\evalString` as you would `eval`.
+The prefered way of installation is via composer. For this, add the following to your `composer.json`:
 
-To have composer handle HackLang files transparently, you can try out the EXPERIMENTAL replacement `ClassLoader` by invoking, at the top level of your entrypoint: `\PhpLang\Phack\ClassLoader::hijack();`.  After this point, any class autoloaded via composer will be preprocessed from HackLang into runable PHP.
 
-To see how HackLang files transpile to PHP, you can run `vendor/bin/phack` which will invoke `PhpLang\Phack\transpileString` for you and provide the output.
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "<git_repository_url>"
+        }
+    ],
+    "require": {
+        "adel/hackparser": "*"
+    }
+
+To Parse a HackLang file, use `new PhpLang\Phack\PhpParser\ParserFactory)->create(PhpLang\Phack\PhpParser\ParserFactory::HACKLANG)->parse($str);`. This returns an abstract syntax tree that can be used for static analysis for example. More informations in the [PHP-Parser documentation](https://github.com/nikic/PHP-Parser/tree/2.x/doc).
+
+To see the AST of a given HackLang file, you can run `vendor/bin/hackParser` which will invoke `compileString` for you and dump the tree.

@@ -1,19 +1,16 @@
 {
-  "name": "phplang/phack",
-  "description": "HackLang parser for PHP",
+  "name": "adel/hackparser",
+  "description": "HackLang parser written in PHP",
   "type": "library",
   "keywords": [
     "hacklang",
     "parser"
   ],
-  "homepage": "https://github.com/phplang/phack",
-  "license": "BSD",
+  "homepage": "<git_repository_url>",
   "authors": [
     {
-      "name": "Sara Golemon",
-      "email": "pollita@php.net",
-      "homepage": "https://twitter.com/SaraMG",
-      "role": "Developer"
+      "name": "Adel Maratova",
+      "email": "adel.maratova@gmail.com"
     }
   ],
   "require": {
@@ -36,6 +33,6 @@
     }
   },
   "bin": [
-    "phack"
+    "hackParser"
   ]
 }
